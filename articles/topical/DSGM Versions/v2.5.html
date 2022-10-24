@@ -35,37 +35,32 @@
 				</div>
 				<br>
 				<!-- Download Section -->
-				<div>
-					<img id="myImg" />
+				<div id="downloadSection">
+					<p><a id="downloadButton"><object data="../../../IMG/Misc/download-outline.svg" style="height:1.5em; width:1.5em;" type="image/svg+xml"></object><span id="downloadText">Download</span></a>Name: DSGM v2.5.exe | Size: 1.55 MB</p>
 					<script>
-						const reader = new FileReader();
+						var dwnldBtn = document.getElementById("downloadButton");
 						let filename = "DSGM v2.5.exe"
-            
+						
             			function download(){
-							fetch('../../../files/DSGM Downloads/DSGM v2.5.exe')
-  								.then(res => res.blob())
+							fetch('https://bowersindustry.github.io/DSGM-Wiki/files/DSGM%20Downloads/DSGM%20v2.5.exe')
+								.then(res => res.blob())
   								.then(blob => {
-    								/*let objectURL = URL.createObjectURL(blob);
-									let myImage = new Image();
-									myImage.src = objectURL;
-									document.getElementById('myImg').src = myImage.src;*/
-									return blob;
-								});
+									var anchor = document.createElement("a");
+            						document.body.append(anchor);
+            						anchor.style = "display: none;";
+
+									var url = window.URL.createObjectURL(blob)
+            						anchor.href = url;
+            						anchor.download = filename;
+
+									anchor.click();
+            						window.URL.revokeObjectURL(url);
+								}
+							);
             			}
-
-            			var blob = download();
-
-            			var anchor = document.createElement("a");
-            			document.body.append(anchor);
-            			anchor.style = "display: none;";
-
-            			var url = window.URL.createObjectURL(blob)
-            			anchor.href = url;
-            			anchor.download = filename;
-
-            			// Force click and download
-            			anchor.click();
-            			window.URL.revokeObjectURL(url);
+						dwnldBtn.addEventListener("click", function(){
+							download();
+						})
 					</script>
 				</div>
 				<br>
