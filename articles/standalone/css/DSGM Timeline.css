@@ -1,0 +1,122 @@
+body{
+	font-family: Arial;
+	background-color: #4C4E52;
+}
+.center{
+	/* outline: solid 1px black; */
+	display: flex;
+	margin: 0px;
+	justify-content: center;
+}
+.left{
+	/* outline: solid 1px black; */
+	display: flex;
+	width: 25%;
+	justify-content: left;
+}
+.backdrop{
+	width: 100%;
+	background-color: #FFFFFF;
+	border-radius: 20px 20px 5px 5px;
+	box-shadow: 0px 0px 2em black;
+}
+#headerText{
+	text-align: center;
+}
+#line{
+	margin-left: 1em;
+	background-color: lightgray;
+	width: 4%;
+	border-radius: 5px;
+}
+.textHeader{
+	margin-block-end: 0em;
+	padding-left: 4px;
+}
+.text{
+	margin-block-start: 0em;
+	padding-left: 4px;
+}
+.note{
+	width: 25vw;
+	background-color: lightgray;
+	border-radius: 20px 20px 20px 0px;
+	margin-left: 2em;
+	padding: 0.1em;
+	margin-right: 1em;
+	overflow: auto;
+}
+.noteImg{
+	margin-right: 1em;
+	margin-bottom: 1em;
+	float: right;
+	border-radius: 15px 15px 15px 15px;
+}
+.ImgDiv{
+	float: right;
+	margin: 30px 0px 3px 4px;
+}
+#top-title{
+	color: white;
+	margin-block-end: 0em;
+	height: 50px;
+}
+a{
+	color: blue;
+	text-decoration: none;
+}
+header {
+    background-image: url("../../../IMG/Misc/header.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px 16px 0px 0px;
+	height: 100px;
+	width: 100%;
+    display: flex;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	vertical-align: middle;
+}
+hr{
+	margin-left: 1em;
+	margin-right: 1em;
+}
+hr.noteDivide{
+	width: 25vw;
+	margin-left: 2em;
+	margin-right: 1em;
+	overflow: auto;
+}
+#sideBar{
+	position: fixed;
+	top: 1em;
+	left: 1em;
+	background-color: white;
+	padding: 1em;
+	border-radius: 15px;
+	z-index: 10;
+}
+.era{
+	border-left: 0.2em solid lightgray;
+}
+.eraText{
+	margin-left: 0.5em;
+	color: black;
+	font-size: large;
+}
+@media screen and (max-width: 900px) {
+    .note{
+		width: 70vw;
+	}
+	.backdrop{
+		width: 90vw;
+	}
+	.eraText{
+		font-size: small;
+	}
+	hr.noteDivide{
+		width: 70vw;
+	}
+}

@@ -1,0 +1,136 @@
+body{
+	font-family: Arial;
+	background-color: #4C4E52;
+}
+#introDivContainer{
+	display: flex;
+	justify-content: center;
+}
+#introDiv{
+	border-radius: 15px;
+	border-color: rgb(197, 197, 197);
+	border-style: solid;
+	margin-left: 1em;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	margin-right: 1em;
+	width: 80%;
+	background-color: lightgray;
+}
+.center{
+	/* outline: solid 1px black; */
+	display: flex;
+	margin: 0px;
+	justify-content: center;
+}
+.backdrop{
+	width: 70vw;
+	background-color: #FFFFFF;
+	border-radius: 20px 20px 5px 5px;
+	box-shadow: 0px 0px 2em black;
+}
+.ArticleSection{
+	display: flex;
+	justify-content: center;
+}
+.SectionHeader{
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+}
+.wh{
+	width:100%;
+}
+.pl{
+	padding-left:1em;
+}
+.ArticleHolder{
+	margin-left: 1em;
+	margin-right: 1em;
+	display: flex;
+	gap: 1em 1em;
+	flex-direction: row;
+	display: flex;
+	justify-content: center;
+}
+.ArticleBackground{
+	background-color: lightgray;
+	display: flex;
+	flex-direction: column;
+	border-radius: 15px;
+	border-style: solid;
+	border-color: gray;
+}
+.ArticleImg{
+	border-radius: 11px 11px 0px 0px;
+}
+.ArticleTitle{
+	margin-block-start: 0em;
+	margin-block-end: 0.1em;
+}
+.ArticleTitleDiv{
+	display: flex;
+	justify-content: center;
+}
+#headerText{
+	text-align: center;
+}
+.textHeader{
+	margin-block-end: 0em;
+	padding-left: 4px;
+}
+.ImgDiv{
+	float: right;
+	margin: 30px 0px 3px 4px;
+}
+#top-title{
+	color: white;
+	margin-block-end: 0em;
+	height: 50px;
+}
+a{
+	color: blue;
+	text-decoration: none;
+}
+p.ArticleTitle{
+	color: black;
+	text-decoration: none;
+}
+header {
+    background-image: url("./IMG/Misc/header.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px 16px 0px 0px;
+	height: 100px;
+	width: 100%;
+    display: flex;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	vertical-align: middle;
+}
+hr{
+	margin-left: 1em;
+	margin-right: 1em;
+}
+hr.noteDivide{
+	width: 25vw;
+	margin-left: 2em;
+	margin-right: 1em;
+	overflow: auto;
+}
+@media screen and (max-width: 900px) {
+	.backdrop{
+		width: 90vw;
+	}
+	hr.noteDivide{
+		width: 70vw;
+	}
+	.ArticleHolder{
+		flex-direction: column;
+	}
+	.ArticleImg{
+		width: 100%;
+		height: 100%;
+	}
+}
