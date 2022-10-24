@@ -41,6 +41,7 @@ hr#headerHr{
 }
 h2.title{
     padding-left: 0.5em;
+    margin-block-end: -0.5em;
 }
 .dsgmText{
 	font-weight: 600;
