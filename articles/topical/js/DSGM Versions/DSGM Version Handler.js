@@ -37,19 +37,19 @@ async function getJSON(){
         });
         JSON.versions.forEach((version, index) => {
             if(version.v == "1"){
-                v1Articles = v1Articles + `<div class="ArticleBackground"><a href="./${JSON.versions[index].version}.html"><img src="../../IMG/DSGM Icons/${JSON.versions[index].image}.png" class="ArticleImg"/><div class="ArticleTitleDiv"><p class="ArticleTitle">${JSON.versions[index].version}</p></div></a></div>`
+                v1Articles = v1Articles + `<div class="ArticleBackground"><a href="./DSGM Versions/${JSON.versions[index].version}.html"><img src="../../IMG/DSGM Icons/${JSON.versions[index].image}.png" class="ArticleImg"/><div class="ArticleTitleDiv"><p class="ArticleTitle">${JSON.versions[index].version}</p></div></a></div>`
             }
             else if(version.v == "2"){
-                v2Articles = v2Articles + `<div class="ArticleBackground"><a href="./${JSON.versions[index].version}.html"><img src="../../IMG/DSGM Icons/${JSON.versions[index].image}.png" class="ArticleImg"/><div class="ArticleTitleDiv"><p class="ArticleTitle">${JSON.versions[index].version}</p></div></a></div>`
+                v2Articles = v2Articles + `<div class="ArticleBackground"><a href="./DSGM Versions/${JSON.versions[index].version}.html"><img src="../../IMG/DSGM Icons/${JSON.versions[index].image}.png" class="ArticleImg"/><div class="ArticleTitleDiv"><p class="ArticleTitle">${JSON.versions[index].version}</p></div></a></div>`
             }
             else if(version.v == "3"){
-                v3Articles = v3Articles + `<div class="ArticleBackground"><a href="./${JSON.versions[index].version}.html"><img src="../../IMG/DSGM Icons/${JSON.versions[index].image}.png" class="ArticleImg"/><div class="ArticleTitleDiv"><p class="ArticleTitle">${JSON.versions[index].version}</p></div></a></div>`
+                v3Articles = v3Articles + `<div class="ArticleBackground"><a href="./DSGM Versions/${JSON.versions[index].version}.html"><img src="../../IMG/DSGM Icons/${JSON.versions[index].image}.png" class="ArticleImg"/><div class="ArticleTitleDiv"><p class="ArticleTitle">${JSON.versions[index].version}</p></div></a></div>`
             }
             else if(version.v == "4"){
-                v4Articles = v4Articles + `<div class="ArticleBackground"><a href="./${JSON.versions[index].version}.html"><img src="../../IMG/DSGM Icons/${JSON.versions[index].image}.png" class="ArticleImg"/><div class="ArticleTitleDiv"><p class="ArticleTitle">${JSON.versions[index].version}</p></div></a></div>`
+                v4Articles = v4Articles + `<div class="ArticleBackground"><a href="./DSGM Versions/${JSON.versions[index].version}.html"><img src="../../IMG/DSGM Icons/${JSON.versions[index].image}.png" class="ArticleImg"/><div class="ArticleTitleDiv"><p class="ArticleTitle">${JSON.versions[index].version}</p></div></a></div>`
             }
             if(version.v == "5"){
-                v5Articles = v5Articles + `<div class="ArticleBackground"><a href="./${JSON.versions[index].version}.html"><img src="../../IMG/DSGM Icons/${JSON.versions[index].image}.png" class="ArticleImg"/><div class="ArticleTitleDiv"><p class="ArticleTitle">${JSON.versions[index].version}</p></div></a></div>`
+                v5Articles = v5Articles + `<div class="ArticleBackground"><a href="./DSGM Versions/${JSON.versions[index].version}.html"><img src="../../IMG/DSGM Icons/${JSON.versions[index].image}.png" class="ArticleImg"/><div class="ArticleTitleDiv"><p class="ArticleTitle">${JSON.versions[index].version}</p></div></a></div>`
             }
         })
         v1Holder.innerHTML = v1Holder.innerHTML + v1Articles;
