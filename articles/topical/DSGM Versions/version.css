@@ -111,7 +111,7 @@ hr.sectionHr{
 	cursor: pointer;
 	margin-block-start: 1em;
 	margin-block-end: 1em;
-	background-color: lime;
+	background-color: gray;
 	border-radius: 15px;
 	padding: 0.5em;
 	color:white;
@@ -119,6 +119,7 @@ hr.sectionHr{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	transition: 200ms;
 }
 #downloadSection{
 	display: flex;

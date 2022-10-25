@@ -39,31 +39,6 @@
 				<!-- Download Section -->
 				<div id="downloadSection">
 					<p id="button"><a id="downloadButton"><object data="../../../IMG/Misc/download-outline.svg" style="height:1.5em; width:1.5em;" type="image/svg+xml"></object><span id="downloadText">Download</span></a>Name: DSGM v4.9A.exe | Size: 20.4 MB</p>
-					<script>
-						var dwnldBtn = document.getElementById("button");
-						let filename = "DSGM v4.9A.exe"
-						
-            			function download(){
-							fetch('https://bowersindustry.github.io/DSGM-Wiki/files/DSGM%20Downloads/DSGM%20v4.9A.exe')
-								.then(res => res.blob())
-  								.then(blob => {
-									var anchor = document.createElement("a");
-            						document.body.append(anchor);
-            						anchor.style = "display: none;";
-
-									var url = window.URL.createObjectURL(blob)
-            						anchor.href = url;
-            						anchor.download = filename;
-
-									anchor.click();
-            						window.URL.revokeObjectURL(url);
-								}
-							);
-            			}
-						dwnldBtn.addEventListener("click", function(){
-							download();
-						})
-					</script>
 				</div>
 				<br>
 				<!-- Other Version Articles Section -->
@@ -76,79 +51,7 @@
 					</div>
 					<div class="middleBar">
 						<div style="width: 80%; display: flex; justify-content: center;">
-							<div style="width: 100%; display: flex; flex-direction: row; gap: 20px 0.5em; overflow:scroll;">
-                                <div class="ArticleBackground">
-									<a href="./v4.9B.html">
-										<img src="../../../IMG/DSGM Icons/DSGMIcon 4-4.9B.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v4.9B</p>
-										</div>
-									</a>
-								</div>
-                                <div class="ArticleBackground">
-									<a href="./v5.03.html">
-										<img src="../../../IMG/DSGM Icons/dsgamemaker.com.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v5.03</p>
-										</div>
-									</a>
-								</div>
-                                <div class="ArticleBackground">
-									<a href="./v5.04.html">
-										<img src="../../../IMG/DSGM Icons/dsgamemaker.com.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v5.04</p>
-										</div>
-									</a>
-								</div>
-                                <div class="ArticleBackground">
-									<a href="./v5.05.html">
-										<img src="../../../IMG/DSGM Icons/dsgamemaker.com.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v5.05</p>
-										</div>
-									</a>
-								</div>
-                                <div class="ArticleBackground">
-									<a href="./v5.06.html">
-										<img src="../../../IMG/DSGM Icons/dsgamemaker.com.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v5.06</p>
-										</div>
-									</a>
-								</div>
-                                <div class="ArticleBackground">
-									<a href="./v5.07.html">
-										<img src="../../../IMG/DSGM Icons/dsgamemaker.com.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v5.07</p>
-										</div>
-									</a>
-								</div>
-                                <div class="ArticleBackground">
-									<a href="./v5.08.html">
-										<img src="../../../IMG/DSGM Icons/dsgamemaker.com.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v5.08</p>
-										</div>
-									</a>
-								</div>
-                                <div class="ArticleBackground">
-									<a href="./v5.09.html">
-										<img src="../../../IMG/DSGM Icons/dsgamemaker.com.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v5.09</p>
-										</div>
-									</a>
-								</div>
-                                <div class="ArticleBackground">
-									<a href="./v5.10.html">
-										<img src="../../../IMG/DSGM Icons/dsgamemaker.com.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v5.10</p>
-										</div>
-									</a>
-								</div>
+							<div id="VersionsHolder" style="width: 100%; display: flex; flex-direction: row; gap: 20px 0.5em; overflow:scroll;">
 							</div>
 						</div>
 					</div>
@@ -164,5 +67,7 @@
 			</div>
 		</div>
 	</div>
+    <script src="../JS/DSGM Versions/DSGM Version Handler.js"></script>
+	<script src="../js/DSGM Versions/downloader.js"></script>
 </body>
 </html>

@@ -39,31 +39,6 @@
 				<!-- Download Section -->
 				<div id="downloadSection">
 					<p id="button"><a id="downloadButton"><object data="../../../IMG/Misc/download-outline.svg" style="height:1.5em; width:1.5em;" type="image/svg+xml"></object><span id="downloadText">Download</span></a>Name: DSGM v2.7A.exe | Size: 1.48 MB</p>
-					<script>
-						var dwnldBtn = document.getElementById("button");
-						let filename = "DSGM v2.7A.exe"
-						
-            			function download(){
-							fetch('https://bowersindustry.github.io/DSGM-Wiki/files/DSGM%20Downloads/DSGM%20v2.7A.exe')
-								.then(res => res.blob())
-  								.then(blob => {
-									var anchor = document.createElement("a");
-            						document.body.append(anchor);
-            						anchor.style = "display: none;";
-
-									var url = window.URL.createObjectURL(blob)
-            						anchor.href = url;
-            						anchor.download = filename;
-
-									anchor.click();
-            						window.URL.revokeObjectURL(url);
-								}
-							);
-            			}
-						dwnldBtn.addEventListener("click", function(){
-							download();
-						})
-					</script>
 				</div>
 				<br>
 				<!-- Other Version Articles Section -->
@@ -76,79 +51,7 @@
 					</div>
 					<div class="middleBar">
 						<div style="width: 80%; display: flex; justify-content: center;">
-							<div style="width: 100%; display: flex; flex-direction: row; gap: 20px 0.5em; overflow:scroll;">
-								<div class="ArticleBackground">
-									<a href="./v2.7B.html">
-										<img src="../../../IMG/DSGM Icons/DSGMIcon 2.5-2.7B.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v2.7B</p>
-										</div>
-									</a>
-								</div>
-								<div class="ArticleBackground">
-									<a href="./v2.8A.html">
-										<img src="../../../IMG/DSGM Icons/DSGMIcon 2.8A-3.1.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v2.8A</p>
-										</div>
-									</a>
-								</div>
-								<div class="ArticleBackground">
-									<a href="./v2.8B.html">
-										<img src="../../../IMG/DSGM Icons/DSGMIcon 2.8A-3.1.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v2.8B</p>
-										</div>
-									</a>
-								</div>
-								<div class="ArticleBackground">
-									<a href="./v2.8C.html">
-										<img src="../../../IMG/DSGM Icons/DSGMIcon 2.8A-3.1.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v2.8C</p>
-										</div>
-									</a>
-								</div>
-								<div class="ArticleBackground">
-									<a href="./v2.8D.html">
-										<img src="../../../IMG/DSGM Icons/DSGMIcon 2.8A-3.1.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v2.8D</p>
-										</div>
-									</a>
-								</div>
-								<div class="ArticleBackground">
-									<a href="./v3.0.html">
-										<img src="../../../IMG/DSGM Icons/DSGMIcon 2.8A-3.1.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v3.0</p>
-										</div>
-									</a>
-								</div>
-								<div class="ArticleBackground">
-									<a href="./v3.1.html">
-										<img src="../../../IMG/DSGM Icons/DSGMIcon 2.8A-3.1.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v3.1</p>
-										</div>
-									</a>
-								</div>
-								<div class="ArticleBackground">
-									<a href="./v4.0.html">
-										<img src="../../../IMG/DSGM Icons/DSGMIcon 4-4.9B.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v4.0</p>
-										</div>
-									</a>
-								</div>
-                                <div class="ArticleBackground">
-									<a href="./v4.1.html">
-										<img src="../../../IMG/DSGM Icons/DSGMIcon 4-4.9B.png" class="ArticleImg"/>
-										<div class="ArticleTitleDiv">
-											<p class="ArticleTitle">v4.1</p>
-										</div>
-									</a>
-								</div>
+							<div id="VersionsHolder" style="width: 100%; display: flex; flex-direction: row; gap: 20px 0.5em; overflow:scroll;">
 							</div>
 						</div>
 					</div>
@@ -164,5 +67,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="../JS/DSGM Versions/DSGM Version Handler.js"></script>
+	<script src="../js/DSGM Versions/downloader.js"></script>
 </body>
 </html>
