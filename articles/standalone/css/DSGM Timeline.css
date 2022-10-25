@@ -51,6 +51,7 @@ body{
 	margin-bottom: 1em;
 	float: right;
 	border-radius: 15px 15px 15px 15px;
+	width: 8em;
 }
 .ImgDiv{
 	float: right;
@@ -106,6 +107,7 @@ hr.noteDivide{
 	color: black;
 	font-size: large;
 }
+
 @media screen and (max-width: 900px) {
     .note{
 		width: 70vw;

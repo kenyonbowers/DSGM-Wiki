@@ -1,0 +1,159 @@
+body{
+	font-family: Arial;
+	background-color: #4C4E52;
+}
+.middleBar{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+#contianer{
+	width: 70vw;
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 0px 0px 2em black;
+}
+header{
+	background-image: url("../../../IMG/Misc/header.png");
+	height: 3em;
+	border-radius: 12px 12px 0px 0px;
+	display: flex;
+	justify-content: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#headerText{
+	color: white;
+	font-size: xx-large;
+	margin-block-start: 0.3em;
+}
+hr#headerHr{
+	width: 90%;
+}
+.Text{
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	font-size: large;
+}
+h2.title{
+    padding-left: 0.3em;
+    margin-block-end: -0.5em;
+}
+.dsgmText{
+	font-weight: 600;
+}
+.ArticleSection{
+	display: flex;
+	justify-content: center;
+}
+.SectionHeader{
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+}
+.wh{
+	width:100%;
+}
+.pl{
+	padding-left:1em;
+}
+.ArticleHolder{
+	margin-left: 1em;
+	margin-right: 1em;
+	display: flex;
+	gap: 1em 1em;
+	flex-direction: row;
+	display: flex;
+	justify-content: center;
+}
+.ArticleBackground{
+	background-color: lightgray;
+	display: flex;
+	flex-direction: column;
+	border-radius: 15px;
+	border-style: solid;
+	border-color: gray;
+}
+.ArticleImg{
+	border-radius: 11px 11px 0px 0px;
+	width: 9em;
+	height: auto;
+}
+.ArticleTitle{
+	margin-block-start: 0em;
+	margin-block-end: 0.1em;
+}
+.ArticleTitleDiv{
+	display: flex;
+	justify-content: center;
+}
+a{
+	color: blue;
+	text-decoration: none;
+}
+p.ArticleTitle{
+	color: black;
+	text-decoration: none;
+}
+hr.sectionHr{
+	width: 80%;
+	margin-block-start: -1em;
+}
+.sectionTitle{
+	display: flex;
+	justify-content: center;
+}
+#downloadButton{
+	cursor: pointer;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	background-color: lime;
+	border-radius: 15px;
+	padding: 0.5em;
+	color:white;
+	box-shadow: 0px 0px 0.5em black;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+#downloadSection{
+	display: flex;
+	justify-content: center;
+	gap: 10px 1em;
+}
+#downloadText{
+	margin-block-start: 0.25em;
+    margin-block-end: 0em;
+}
+.fa-brands{
+	font-size: 25px;
+}
+.fa-reddit-alien{
+	font-size: 30px;
+	color: #ff4500;
+}
+.fa-discord{
+	color: #5865F2;
+}
+.footerLinkText{
+	color: white;
+	font-size: medium;
+}
+#reddit{
+	padding-top: 0.5em;
+    margin-block-end: 0em;
+}
+#discord{
+	margin-block-start: 0em;
+}
+
+
+@media screen and (max-width: 900px){
+	#contianer{
+		width: 90vw;
+	}
+}
