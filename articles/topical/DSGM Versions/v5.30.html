@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DSGM Wiki : DSGM v5.30</title>
+	<link rel="stylesheet" href="./version.css" />
+	<link rel="stylesheet" href="../../../CSS/footer.css" />
+	<script src="https://kit.fontawesome.com/8dd3442808.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+	<div class="middleBar">
+		<div id="contianer">
+			<!-- Header -->
+			<div>
+				<header>
+					<p id="headerText">DS Game Maker v5.30</p>
+				</header>
+				<hr id="headerHr">
+			</div>
+			<!-- Content -->
+			<div>
+				<!-- Description Section -->
+				<div class="middleBar">
+					<div style="width: 80%; background-color: lightgray; border-radius: 10px; border-color: rgb(194, 194, 194); border-style: solid;">
+						<p class="Text">DS Game Maker v5.30 was released on August 2nd, 2022 at 05:14. It was created by <a>DigitalDesignDude</a> using an old version of the source code of DS Game Maker. The installation instructions can be found <a href="https://github.com/DigitalDesignDude/DS-Game-Maker-5-Setup" target="_blank">here</a>.</p>
+					</div>
+				</div>
+				<br>
+                <!-- New Features Section -->
+                <div class="middleBar">
+					<div style="width: 80%; background-color: lightgray; border-radius: 10px; border-color: rgb(194, 194, 194); border-style: solid;">
+						<h2 class="title">New Features:</h2>
+                        <p class="Text">• Ability to re-arrange side panel assets.<br>• Fixed inability to Copy and Paste Actions<br>• Room Preview window now tiles any background size<br>• Fixed inability to import 16x8 and 32x8 sized sprites.<br>• Added new resource links to the "Help" tab.</p>
+					</div>
+				</div>
+				<br>
+				<!-- Download Section -->
+				<div id="downloadSection">
+					<p id="button"><a id="downloadButton"><object data="../../../IMG/Misc/download-outline.svg" style="height:1.5em; width:1.5em;" type="image/svg+xml"></object><span id="downloadText">Download</span></a>Name: <span id="NameOfFile"></span> | Size: 0 MB</p>
+				</div>
+				<br>
+				<!-- Other Version Articles Section -->
+				<div>
+					<div>
+						<div class="sectionTitle">
+							<h2>Other Versions</h2>
+						</div>
+						<hr class="sectionHr">
+					</div>
+					<div class="middleBar">
+						<div style="width: 80%; display: flex; justify-content: center;">
+							<div id="VersionsHolder" style="width: 100%; display: flex; flex-direction: row; gap: 20px 0.5em; overflow:scroll;">
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>
+				<!-- Footer Section -->
+				<div style="background-color:black; height:5em; border-radius: 0px 0px 13px 13px; display:flex; justify-content: center; width: 100%;">
+					<div style="display:flex; flex-direction: column;">
+						<a href="https://www.reddit.com/r/DSGameMaker/" target="_blank" class="footerLinkText" id="reddit"><span class="fa-brands fa-reddit-alien"></span> r/DSGameMaker</a>
+						<a href="https://discord.gg/vx3g55EPT6" target="_blank" class="footerLinkText" id="discord"><span class="fa-brands fa-discord"></span> DS Game Maker</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script src="../js/DSGM Versions/DSGM Version Handler.js"></script>
+	<script src="../js/DSGM Versions/downloader.js"></script>
 </body>
 </html>

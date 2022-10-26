@@ -1,21 +1,22 @@
-var dwnldBtn = document.getElementById("button");
-var button = document.getElementById("downloadButton");
+var dwnldBtn = document.getElementById("downloadButton");
 var filename = "";
 var ext = "";
 var title = document.getElementsByTagName("title")[0].innerText.split(" ");
 
 async function getEXT(){
 	var JSON = await fetch('https://raw.githubusercontent.com/BowersIndustry/DSGM-Wiki-Files/main/Article%20Files/topical/DSGM%20Versions/DSGM%20Versions%20Available.json').then((result) => {
-		return result.json();
+		return result.json()
 	});
 	JSON.versions.forEach((version, index) => {
 		if(version.version == title[4]){
 			ext = version.ext;
 		}
 	});
-
-	filename = "DSGM " + title[4] + "." + ext;
-	FetchTheRest();
+	console.log(ext)
+	if(ext != ""){
+		filename = "DSGM " + title[4] + "." + ext;
+		FetchTheRest();
+	}
 }
 getEXT();
 
@@ -32,7 +33,7 @@ async function FetchTheRest(){
 			anchor.href = url;
 			anchor.download = filename;
 
-			button.style = "background-color: #00ff00;"
+			dwnldBtn.style = "background-color: #00ff00;"
 		}
 	);
 }
