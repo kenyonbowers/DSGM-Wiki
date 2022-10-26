@@ -4,22 +4,7 @@ var ext = "";
 var title = document.getElementsByTagName("title")[0].innerText.split(" ");
 
 async function FetchTheRest(){
-	fetch(`https://raw.githubusercontent.com/BowersIndustry/DSGM-Wiki-Files/main/DSGM%20Downloads/${filename}`)
-		.catch((err) => {
-			console.log("err")
-		})
-		.then(res => res.blob())
-		.then(blob => {
-			document.body.append(anchor);
-			anchor.style = "display: none;";
-
-       		var url = window.URL.createObjectURL(blob)
-			anchor.href = url;
-			anchor.download = filename;
-
-			dwnldBtn.style = "background-color: #00ff00;"
-		}
-	);
+	
 }
 
 async function getEXT(){
@@ -34,7 +19,26 @@ async function getEXT(){
 	if(ext != ""){
 		filename = "DSGM " + title[4] + "." + ext;
 		document.getElementById("NameOfFile").innerHTML = filename;
-		FetchTheRest();
+		fetch(`https://raw.githubusercontent.com/BowersIndustry/DSGM-Wiki-Files/main/DSGM%20Downloads/${filename}`)
+			.then((response) => {
+				if (response.ok) {
+			  		return response.blob();
+				}
+				throw new Error('Something went wrong');
+		  	})
+			.then((blob) => {
+				document.body.append(anchor);
+				anchor.style = "display: none;"
+
+       			var url = window.URL.createObjectURL(blob)
+				anchor.href = url;
+				anchor.download = filename;
+
+				dwnldBtn.style = "background-color: #00ff00;"
+			})
+			.catch((err) => {
+				console.log(err)
+			});
 	}
 }
 
