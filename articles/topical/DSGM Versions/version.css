@@ -56,10 +56,10 @@ h2.title{
 	width: 80%;
 }
 .wh{
-	width:100%;
+	width: 100%;
 }
 .pl{
-	padding-left:1em;
+	padding-left: 1em;
 }
 .ArticleHolder{
 	margin-left: 1em;
@@ -136,6 +136,11 @@ hr.sectionHr{
 	border-radius: 15px;
 	outline-color: lightgray;
 	outline-style: solid;
+}
+#footer{
+	display: block;
+	width: 100%;
+	bottom: 0;
 }
 
 @media screen and (max-width: 900px){
