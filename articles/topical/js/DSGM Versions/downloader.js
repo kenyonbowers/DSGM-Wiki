@@ -3,6 +3,7 @@ var filename = "";
 var ext = "";
 var title = document.getElementsByTagName("title")[0].innerText.split(" ");
 
+/*
 async function getEXT(){
 	var JSON = await fetch('https://raw.githubusercontent.com/BowersIndustry/DSGM-Wiki-Files/main/Article%20Files/topical/DSGM%20Versions/DSGM%20Versions%20Available.json').then((result) => {
 		return result.json()
@@ -21,15 +22,18 @@ async function getEXT(){
 getEXT();
 
 var anchor = document.createElement("a");
-
+*/
 async function FetchTheRest(){
 	fetch(`https://raw.githubusercontent.com/BowersIndustry/DSGM-Wiki-Files/main/DSGM%20Downloads/${filename}`)
+		.catch((err) => {
+			console.log("err")
+		})
 		.then(res => res.blob())
 		.then(blob => {
 			document.body.append(anchor);
 			anchor.style = "display: none;";
 
-        	var url = window.URL.createObjectURL(blob)
+       		var url = window.URL.createObjectURL(blob)
 			anchor.href = url;
 			anchor.download = filename;
 
@@ -37,6 +41,26 @@ async function FetchTheRest(){
 		}
 	);
 }
+
+async function getEXT(){
+	var JSON = await fetch('https://raw.githubusercontent.com/BowersIndustry/DSGM-Wiki-Files/main/Article%20Files/topical/DSGM%20Versions/DSGM%20Versions%20Available.json').then((result) => {
+		return result.json();
+	});
+	JSON.versions.forEach((version, index) => {
+		if(version.version == title[4]){
+			ext = version.ext;
+		}
+	});
+	if(ext != ""){
+		filename = "DSGM " + title[4] + "." + ext;
+		document.getElementById("NameOfFile").innerHTML = filename;
+		FetchTheRest();
+	}
+}
+
+getEXT();
+
+var anchor = document.createElement("a");
 
 dwnldBtn.addEventListener("click", function(){
     anchor.click();
