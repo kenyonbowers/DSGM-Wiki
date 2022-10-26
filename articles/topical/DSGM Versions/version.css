@@ -136,15 +136,28 @@ hr.sectionHr{
 	border-radius: 15px;
 	outline-color: lightgray;
 	outline-style: solid;
+	width: 20vw;
 }
 #footer{
 	display: block;
 	width: 100%;
 	bottom: 0;
 }
+#TextDownload{
+	display: flex;
+	justify-content: center;
+}
 
 @media screen and (max-width: 900px){
 	#contianer{
 		width: 90vw;
+	}
+	#button{
+		width: 63vw;
+	}
+}
+@media screen and (max-width: 1200px){
+	#button{
+		width: 40vw;
 	}
 }

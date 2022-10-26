@@ -2,6 +2,7 @@ var dwnldBtn = document.getElementById("downloadButton");
 var filename = "";
 var ext = "";
 var title = document.getElementsByTagName("title")[0].innerText.split(" ");
+var size = "";
 
 async function FetchTheRest(){
 	
@@ -14,11 +15,13 @@ async function getEXT(){
 	JSON.versions.forEach((version, index) => {
 		if(version.version == title[4]){
 			ext = version.ext;
+			size = version.size;
 		}
 	});
+
 	if(ext != ""){
 		filename = "DSGM " + title[4] + "." + ext;
-		document.getElementById("NameOfFile").innerHTML = filename;
+		document.getElementById("NameOfFile").innerText = "Name: " + filename + " | " + "Size: " + size;
 		fetch(`https://raw.githubusercontent.com/BowersIndustry/DSGM-Wiki-Files/main/DSGM%20Downloads/${filename}`)
 			.then((response) => {
 				if (response.ok) {
@@ -39,6 +42,10 @@ async function getEXT(){
 			.catch((err) => {
 				console.log(err)
 			});
+	}
+	else{
+		filename = "File Not Availible";
+		document.getElementById("NameOfFile").innerText = "Name: " + filename + " | " + "Size: " + size;
 	}
 }
 
