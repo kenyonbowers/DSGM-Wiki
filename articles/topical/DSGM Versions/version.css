@@ -148,16 +148,16 @@ hr.sectionHr{
 	justify-content: center;
 }
 
+@media screen and (max-width: 1200px){
+	#button{
+		width: 40vw;
+	}
+}
 @media screen and (max-width: 900px){
 	#contianer{
 		width: 90vw;
 	}
 	#button{
 		width: 63vw;
-	}
-}
-@media screen and (max-width: 1200px){
-	#button{
-		width: 40vw;
 	}
 }
