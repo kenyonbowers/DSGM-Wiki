@@ -33,6 +33,7 @@ body{
 	margin: 0%;
 }
 #innerContainer{
+	width: 100%;
 	display: flex;
 	justify-content: center;
 }
