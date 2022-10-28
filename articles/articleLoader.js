@@ -2,12 +2,10 @@ var StandaloneArticles = document.querySelectorAll(".Standalone");
 var TopicalArticles = document.querySelectorAll(".Topical");
 
 StandaloneArticles.forEach((Article) => {
-    console.log(Article.href)
     Article.href = `./articles/standalone/${Article.innerText}.html`
-    console.log(Article.href)
+    Article.children[0].src = `./IMG/articles/standalone/${Article.innerText}/${Article.innerText}.png`;
 });
 TopicalArticles.forEach((Article) => {
-    console.log(Article.href)
     Article.href = `./articles/topical/${Article.innerText}.html`
-    console.log(Article.href)
+    Article.children[0].src = `./IMG/articles/topical/${Article.innerText}/${Article.innerText}.png`;
 });
