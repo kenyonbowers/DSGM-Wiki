@@ -112,6 +112,13 @@ hr.sectionHr{
 	width: 100%;
 	bottom: 0;
 }
+.background{
+	width: 80%;
+	background-color: lightgray;
+	border-radius: 10px;
+	border-color: rgb(194, 194, 194);
+	border-style: solid;
+}
 
 @media screen and (max-width: 900px){
 	#contianer{
