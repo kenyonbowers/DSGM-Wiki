@@ -19,7 +19,7 @@ async function GetVeterans(){
                 contactInfo = contactInfo + `Facebook: <a href="" target="_blank">${veteran.Facebook}</a><br>`;
             }
             if(veteran.Twitter != ""){
-                contactInfo = contactInfo + `Twitter: <a href="https://twitter.com/${veteran.Twitter}" target="_blank">${veteran.Twitter}</a><br>`;
+                contactInfo = contactInfo + `Twitter: <a href="https://twitter.com/${veteran.Twitter.split("@")[1]}" target="_blank">${veteran.Twitter}</a><br>`;
             }
             if(veteran.Discord != ""){
                 contactInfo = contactInfo + `Discord: ${veteran.Discord}<br>`;
