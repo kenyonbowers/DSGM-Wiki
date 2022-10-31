@@ -1,5 +1,6 @@
 var contactInfo = '<h2 class="title">Information:</h2><p class="Text">'
 var infoDiv = document.getElementById("info");
+var pfp = document.getElementById("pfp");
 
 async function GetVeterans(){
     var JSON = await fetch('https://raw.githubusercontent.com/BowersIndustry/DSGM-Wiki-Files/main/Article%20Files/topical/DSGM%20Veterans/VeteransInfo.json').then((result) => {
@@ -7,6 +8,7 @@ async function GetVeterans(){
     });
     JSON.veterans.forEach((veteran, index) => {
 	    if(veteran.Name == document.getElementsByTagName('title')[0].innerText.split(" : ")[1]){
+            pfp.src = `../../../IMG/Veterans/${veteran.Name}.png`;
 		    if(veteran.Email != ""){
                 contactInfo = contactInfo + `Email: <a href="mailto:${veteran.Email}?" subject="DSGM" target="_blank">${veteran.Email}</a><br>`;
             }

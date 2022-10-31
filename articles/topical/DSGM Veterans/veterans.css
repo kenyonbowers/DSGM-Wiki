@@ -3,3 +3,14 @@ img{
     margin: 1em;
     border-radius: 16px;
 }
+#pfpDiv{
+    float: left;
+}
+@media screen and (max-width: 900px){
+    h2{
+        margin-block-start: 0em;
+    }
+	#pfpDiv{
+		float: none;
+	}
+}
