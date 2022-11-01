@@ -23,7 +23,7 @@ async function getJSON() {
 	}
 	else{
 		filename = "File Not Availible";
-		document.getElementById("NameOfFile").innerText = "Name: " + filename + " | " + "Size: " + size;
+		document.getElementById("NameOfFile").innerText = "Name: " + filename + " | " + "Size: 0.0 MB";
 	}
 }
 
