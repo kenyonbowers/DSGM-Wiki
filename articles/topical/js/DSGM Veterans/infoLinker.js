@@ -4,7 +4,7 @@ var pfp = document.getElementById("pfp");
 
 async function GetVeterans(){
     var JSON = await fetch('https://raw.githubusercontent.com/BowersIndustry/DSGM-Wiki-Files/main/Article%20Files/topical/DSGM%20Veterans/VeteransInfo.json').then((result) => {
-	    return result.json();
+        return result.json();
     });
     JSON.veterans.forEach((veteran, index) => {
 	    if(veteran.Name == document.getElementsByTagName('title')[0].innerText.split(" : ")[1]){
@@ -25,7 +25,7 @@ async function GetVeterans(){
                 contactInfo = contactInfo + `Discord: ${veteran.Discord}<br>`;
             }
             if(veteran.Reddit != ""){
-                contactInfo = contactInfo + `Reddit: <a href="" target="_blank">${veteran.Reddit}</a><br>`;
+                contactInfo = contactInfo + `Reddit: <a href="https://reddit.com/user/${veteran.Reddit}" target="_blank">${veteran.Reddit}</a><br>`;
             }
             contactInfo = contactInfo + "</p>";
             infoDiv.innerHTML = contactInfo;
