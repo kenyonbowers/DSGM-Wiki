@@ -27,6 +27,15 @@ async function GetVeterans(){
             if(veteran.Reddit != ""){
                 contactInfo = contactInfo + `Reddit: <a href="https://reddit.com/user/${veteran.Reddit}" target="_blank">${veteran.Reddit}</a><br>`;
             }
+            if(veteran.GitHub != ""){
+                contactInfo = contactInfo + `GitHub: <a href="https://github.com/${veteran.GitHub}" target="_blank">${veteran.GitHub}</a><br>`;
+            }
+            if(veteran.Itchio != ""){
+                contactInfo = contactInfo + `Itch.io: <a href="https://${veteran.Itchio}.itch.io" target="_blank">${veteran.Itchio}</a><br>`;
+            }
+            if(veteran.Website != ""){
+                contactInfo = contactInfo + `Website: <a href="${veteran.Website}" target="_blank">${veteran.Website.split("https://")[1]}</a><br>`;
+            }
             contactInfo = contactInfo + "</p>";
             infoDiv.innerHTML = contactInfo;
 	    }
