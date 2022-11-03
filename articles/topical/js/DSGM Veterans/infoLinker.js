@@ -36,6 +36,9 @@ async function GetVeterans(){
             if(veteran.Website != ""){
                 contactInfo = contactInfo + `Website: <a href="${veteran.Website}" target="_blank">${veteran.Website.split("https://")[1]}</a><br>`;
             }
+            if(veteran.Email == "" && veteran.YouTube == "" && veteran.Facebook == "" && veteran.Twitter == "" && veteran.Discord == "" && veteran.Reddit == "" && veteran.GitHub == "" && veteran.Itchio == "" && veteran.Website == ""){
+                contactInfo = contactInfo + `Nothing to Show<br>`;
+            }
             contactInfo = contactInfo + "</p>";
             infoDiv.innerHTML = contactInfo;
 	    }
