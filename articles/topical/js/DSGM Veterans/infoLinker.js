@@ -13,7 +13,7 @@ async function GetVeterans(){
                 contactInfo = contactInfo + `Email: <a href="mailto:${veteran.Email}?" subject="DSGM" target="_blank">${veteran.Email}</a><br>`;
             }
             if(veteran.YouTube != ""){
-                contactInfo = contactInfo + `YouTube: <a href="${veteran.YouTubeValue}" target="_blank">${veteran.YouTube}</a><br>`;
+                contactInfo = contactInfo + `YouTube: <a href="https://${veteran.YouTubeValue}" target="_blank">${veteran.YouTube}</a><br>`;
             }
             if(veteran.Facebook != ""){
                 contactInfo = contactInfo + `Facebook: <a href="" target="_blank">${veteran.Facebook}</a><br>`;
@@ -34,7 +34,7 @@ async function GetVeterans(){
                 contactInfo = contactInfo + `Itch.io: <a href="https://${veteran.Itchio}.itch.io" target="_blank">${veteran.Itchio}</a><br>`;
             }
             if(veteran.Website != ""){
-                contactInfo = contactInfo + `Website: <a href="${veteran.Website}" target="_blank">${veteran.Website.split("https://")[1]}</a><br>`;
+                contactInfo = contactInfo + `Website: <a href="https://${veteran.Website}" target="_blank">${veteran.Website}</a><br>`;
             }
             if(veteran.Email == "" && veteran.YouTube == "" && veteran.Facebook == "" && veteran.Twitter == "" && veteran.Discord == "" && veteran.Reddit == "" && veteran.GitHub == "" && veteran.Itchio == "" && veteran.Website == ""){
                 contactInfo = contactInfo + `Nothing to Show<br>`;
