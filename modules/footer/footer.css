@@ -9,10 +9,12 @@ body{
 	color: #ff4500;
 }
 .fa-discord{
+	font-size: 25px;
 	color: #5865F2;
 }
-.fa-twitter{
-	color: #1DA1F2;
+.fa-youtube{
+	font-size: 27px;
+	color: #FF0000;
 }
 .footerLinkText{
 	color: white;
@@ -29,7 +31,7 @@ body{
 #contianer{
 	position: absolute;
 	width: 100%;
-	height: 5em;
+	height: 7em;
 	bottom: 0;
 	left: 0;
 	background-color: black;
